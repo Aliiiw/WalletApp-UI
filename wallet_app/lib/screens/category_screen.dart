@@ -16,12 +16,14 @@ class _CategoryScreenState extends State<CategoryScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     double total = 0;
     for(var element in widget.category.incomes){
       total += element.price;
     }
     final double leftPrice = widget.category.maxPrice - total;
-    
+    final double percent = leftPrice / widget.category.maxPrice;
+
     return  Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey[900],
@@ -50,6 +52,12 @@ class _CategoryScreenState extends State<CategoryScreen> {
                     blurRadius: 7
                   )
                 ]
+              ),
+              child: Center(
+                child: Text(
+                   '\$${leftPrice.toStringAsFixed(2)} / \$${widget.category.maxPrice}',
+                  style: const TextStyle(color: Colors.grey, fontWeight: FontWeight.w600,fontSize: 20),  
+                ),
               ),
                
             )
