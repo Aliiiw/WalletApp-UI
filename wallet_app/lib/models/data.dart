@@ -32,10 +32,10 @@ final List<double> weeklySpending = [       //7 days of week 7 data
 
 
 List<Category> categories = [
-  Category('Kids', 500, _incomes()),
+  Category('Kids', 330, _incomes()),
   Category('Food', 800, _incomes()),
-  Category('Learning', 300, _incomes()),
-  Category('Educations', 120, _incomes()),
+  Category('Learning', 400, _incomes()),
+  Category('Educations', 700, _incomes()),
   Category('Clothes', 1000, _incomes()),
   Category('Gifts', 400, _incomes()),
 
