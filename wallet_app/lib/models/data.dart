@@ -8,24 +8,26 @@ final randomNumber = Random();
 
 _incomes(){
   List<Income> incomes = [
-    Income(name : 'Item number 1', price : randomNumber.nextDouble() * 50),
-    Income(name : 'Item number 2', price : randomNumber.nextDouble() * 50),
-    Income(name : 'Item number 3', price : randomNumber.nextDouble() * 50),
-    Income(name : 'Item number 4', price : randomNumber.nextDouble() * 50),
-    Income(name : 'Item number 5', price : randomNumber.nextDouble() * 50),
+    Income(name : 'Item number 1', price : randomNumber.nextDouble() * 90),
+    Income(name : 'Item number 2', price : randomNumber.nextDouble() * 90),
+    Income(name : 'Item number 3', price : randomNumber.nextDouble() * 90),
+    Income(name : 'Item number 4', price : randomNumber.nextDouble() * 90),
+    Income(name : 'Item number 5', price : randomNumber.nextDouble() * 90),
+    Income(name : 'Item number 6', price : randomNumber.nextDouble() * 90),
   ];
   return incomes;
 }
 
 
 final List<double> weeklySpending = [       //7 days of week 7 data
-  randomNumber.nextDouble() * 10,
-  randomNumber.nextDouble() * 10,
-  randomNumber.nextDouble() * 10,
-  randomNumber.nextDouble() * 10,
-  randomNumber.nextDouble() * 10,
-  randomNumber.nextDouble() * 10,
-  randomNumber.nextDouble() * 10,
+  randomNumber.nextDouble() * 100,
+  randomNumber.nextDouble() * 100,
+  randomNumber.nextDouble() * 100,
+  randomNumber.nextDouble() * 100,
+  randomNumber.nextDouble() * 100,
+  randomNumber.nextDouble() * 100,
+  randomNumber.nextDouble() * 100,
+
 ];
 
 

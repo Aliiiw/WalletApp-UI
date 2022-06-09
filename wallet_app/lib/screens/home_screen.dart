@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_app/models/data.dart';
+
+import '../widgets/chart.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -28,19 +31,18 @@ class HomeScreen extends StatelessWidget {
         slivers: [
           SliverList(delegate: SliverChildBuilderDelegate((context, index) {
             return Container(
-              height: 100,
               margin: const EdgeInsets.all(8),
               decoration:   BoxDecoration(
-                boxShadow: const [
+                boxShadow:  [
                   BoxShadow(
-                    color: Colors.black87,
-                    offset: Offset(0, 2),
+                    color: Colors.grey.shade900,
+                    offset: const Offset(0, 2),
                     blurRadius: 6
                   )
                 ],
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Chart(),
+              child: Chart(incomes: weeklySpending,),
             );
 
           },
