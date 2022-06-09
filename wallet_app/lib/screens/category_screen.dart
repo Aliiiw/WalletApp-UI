@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:wallet_app/models/color_status.dart';
+import 'package:wallet_app/widgets/circular_chart.dart';
 
 import '../models/category.dart';
 
@@ -38,8 +40,8 @@ class _CategoryScreenState extends State<CategoryScreen> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(20),
-              padding: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               width: double.infinity,
               height: 250,
               decoration: BoxDecoration(
@@ -53,10 +55,13 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   )
                 ]
               ),
-              child: Center(
-                child: Text(
-                   '\$${leftPrice.toStringAsFixed(2)} / \$${widget.category.maxPrice}',
-                  style: const TextStyle(color: Colors.grey, fontWeight: FontWeight.w600,fontSize: 20),  
+              child: CustomPaint(
+                foregroundPainter: CircularChar(Colors.grey.shade700, getStatusColor(context, percent), percent, 16) ,
+                child: Center(
+                  child: Text(
+                     '\$${leftPrice.toStringAsFixed(2)} / \$${widget.category.maxPrice}',
+                    style: const TextStyle(color: Colors.grey, fontWeight: FontWeight.w600,fontSize: 20),  
+                  ),
                 ),
               ),
                
